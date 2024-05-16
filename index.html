@@ -76,20 +76,6 @@
         .sentiments {
             margin-top: 3rem;
         }
-        .images-grid {
-            display: grid;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-        .images-grid.row-1 {
-            grid-template-columns: repeat(3, 1fr);
-        }
-        .images-grid.row-2 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-        .images-grid.row-3, .images-grid.row-4 {
-            grid-template-columns: 1fr;
-        }
         footer {
             text-align: center;
             padding: 1rem 0;
@@ -150,24 +136,13 @@
                 </div>
             </div>
 
-            <div class="images-grid row-1">
-                <img src="t1.png" alt="Entertainment and Lifestyle Word Cloud">
-                <img src="t2.png" alt="Politics and Current Events Word Cloud">
-                <img src="t3.png" alt="Business and Technology Word Cloud">
-            </div>
+            <h2 class="sentiments">Sentiment Analysis</h2>
+            <img src="allnew 1.png" alt="Sentiment Analysis Plot">
+            <p>Using the VADER sentiment analysis tool, headlines were categorized by emotional valence over time. This reveals trends in public sentiment as reflected in news headlines from 2007 to 2022.</p>
 
-            <div class="images-grid row-2">
-                <img src="t4.png" alt="Social Issues Word Cloud">
-                <img src="t5.png" alt="Crime and Tragedy Word Cloud">
-            </div>
-
-            <div class="images-grid row-3">
-                <img src="allnew 1.png" alt="Sentiment Analysis Plot">
-            </div>
-
-            <div class="images-grid row-4">
-                <img src="allnew 3.png" alt="Sentiment Analysis by Outlet">
-            </div>
+            <h2>Sentiment Analysis by Outlet</h2>
+            <img src="allnew 3.png" alt="Sentiment Analysis by Outlet">
+            <p>This section visualizes the sentiment of headlines from different news outlets. The plot shows how sentiment varies between outlets and over time, offering insight into the editorial tone and bias of each outlet.</p>
             
             <h2>Conclusion</h2>
             <p>Analyzing patterns in news headlines over the past 15 years using topic modeling and sentiment analysis provides valuable insights into the changing media landscape and public discourse. The findings highlight the evolution of major topics and sentiments, reflecting societal shifts and the influence of significant events.</p>

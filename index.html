@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sandeep Srinivas Pogula - AI Research Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: 2rem auto;
+            background-color: #fff;
+            padding: 2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .content img {
+            max-width: 100%;
+            height: auto;
+        }
+        .content {
+            margin-top: 2rem;
+        }
+        .content h3 {
+            margin-top: 1.5rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #333;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sandeep Srinivas Pogula</h1>
+        <p>Exploring 15 Years of News Headlines using Topic Modeling and Sentiment Analysis</p>
+    </header>
+
+    <div class="container">
+        <section class="content">
+            <h2>Introduction</h2>
+            <p>This report analyzes a dataset of 4.5 million news headlines published between 2007-2022 from the top 10 news outlets by internet viewership in the United States. The goal is to explore patterns and trends in news headlines over time using unsupervised machine learning techniques like topic modeling and sentiment analysis.</p>
+            
+            <h2>Related Research</h2>
+            <p>News headlines are one of the important factors which influence people’s opinions; Headlines act as gateways for articles. Analyzing patterns and trends in news headlines can provide valuable insights in understanding news media on internet and their evolution through time.</p>
+            
+            <h2>Machine Learning Techniques Used</h2>
+            <p>This report performs topic modeling using Latent Dirichlet Allocation (LDA) to extract abstract topics and frequent words from the corpus of 4.5 million headlines. Also, sentiment analysis using the pretrained VADER lexicon is used to categorize headlines by emotional valence to track sentiment over time.</p>
+            
+            <h2>Dataset</h2>
+            <p>The dataset comprises 4.5 million headlines published between 2007-2022 by the top 10 digital news outlets in the US. No additional demographic or other sensitive attributes are included. The dataset does not include the full text of the articles, which limits the context and depth of the analysis.</p>
+
+            <h2>Evaluation and Findings: Topic Modeling (LDA)</h2>
+            <h3>Entertainment and Lifestyle</h3>
+            <img src="t2.png" alt="Entertainment and Lifestyle Word Cloud">
+            <p>This topic includes words related to entertainment news, such as “star”, “dies”, “review”, “love”, “book”, etc.</p>
+
+            <h3>Politics and Current Events</h3>
+            <img src="t2.png" alt="Politics and Current Events Word Cloud">
+            <p>This topic focuses on political figures and events, with words like “trump”, “obama”, “biden”, “president”, “russia”, “china”, etc.</p>
+
+            <h3>Business and Technology</h3>
+            <img src="t3.png" alt="Business and Technology Word Cloud">
+            <p>This topic covers news related to the stock market, and technology, with words like “market”, “stock”, “million”, “tech”, “shares”, “data”, etc.</p>
+
+            <h3>Social Issues</h3>
+            <img src="t4.png" alt="Social Issues Word Cloud">
+            <p>This topic encompasses social issues and public opinion, with words such as “people”, “community”, “rights”, “social”, “change”, etc.</p>
+
+            <h3>Crime and Tragedy</h3>
+            <img src="t5.png" alt="Crime and Tragedy Word Cloud">
+            <p>This topic includes words related to crime and tragic events, such as “police”, “killed”, “attack”, “murder”, “death”, etc.</p>
+
+            <h2>Sentiment Analysis</h2>
+            <img src="allnew1.png" alt="Sentiment Analysis Plot">
+            <p>Using the VADER sentiment analysis tool, headlines were categorized by emotional valence over time. This reveals trends in public sentiment as reflected in news headlines from 2007 to 2022.</p>
+
+            <h2>Sentiment Analysis by Outlet</h2>
+            <img src="images/allnew3.png" alt="Sentiment Analysis by Outlet">
+            <p>This section visualizes the sentiment of headlines from different news outlets. The plot shows how sentiment varies between outlets and over time, offering insight into the editorial tone and bias of each outlet.</p>
+            
+            <h2>Conclusion</h2>
+            <p>Analyzing patterns in news headlines over the past 15 years using topic modeling and sentiment analysis provides valuable insights into the changing media landscape and public discourse. The findings highlight the evolution of major topics and sentiments, reflecting societal shifts and the influence of significant events.</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sandeep Srinivas Pogula. All rights reserved.</p>
+    </footer>
+</body>
+</html>

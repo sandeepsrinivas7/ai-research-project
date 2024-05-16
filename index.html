@@ -4,28 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sandeep Srinivas Pogula - AI Research Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #0f0f0f;
+            color: #ddd;
         }
         header {
-            background-color: #333;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
             color: #fff;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
         }
         .container {
-            width: 80%;
-            margin: 2rem auto;
-            background-color: #fff;
+            width: 90%;
+            margin: 3rem auto;
+            background-color: #1f1f1f;
             padding: 2rem;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
-        h1, h2, h3 {
-            color: #333;
+        h2, h3 {
+            color: #00c6ff;
         }
         p {
             line-height: 1.6;
@@ -33,12 +46,35 @@
         .content img {
             max-width: 100%;
             height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .content img:hover {
+            transform: scale(1.05);
         }
         .content {
             margin-top: 2rem;
         }
-        .content h3 {
-            margin-top: 1.5rem;
+        .topics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .topics div {
+            background-color: #2f2f2f;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .topics div:hover {
+            transform: translateY(-10px);
+        }
+        .topics img {
+            border-radius: 10px;
+        }
+        .sentiments {
+            margin-top: 3rem;
         }
         footer {
             text-align: center;
@@ -72,27 +108,35 @@
             <p>The dataset comprises 4.5 million headlines published between 2007-2022 by the top 10 digital news outlets in the US. No additional demographic or other sensitive attributes are included. The dataset does not include the full text of the articles, which limits the context and depth of the analysis.</p>
 
             <h2>Evaluation and Findings: Topic Modeling (LDA)</h2>
-            <h3>Entertainment and Lifestyle</h3>
-            <img src="t2.png" alt="Entertainment and Lifestyle Word Cloud">
-            <p>This topic includes words related to entertainment news, such as “star”, “dies”, “review”, “love”, “book”, etc.</p>
+            <div class="topics">
+                <div>
+                    <h3>Entertainment and Lifestyle</h3>
+                    <img src="t1.png" alt="Entertainment and Lifestyle Word Cloud">
+                    <p>This topic includes words related to entertainment news, such as “star”, “dies”, “review”, “love”, “book”, etc.</p>
+                </div>
+                <div>
+                    <h3>Politics and Current Events</h3>
+                    <img src="t2.png" alt="Politics and Current Events Word Cloud">
+                    <p>This topic focuses on political figures and events, with words like “trump”, “obama”, “biden”, “president”, “russia”, “china”, etc.</p>
+                </div>
+                <div>
+                    <h3>Business and Technology</h3>
+                    <img src="t3.png" alt="Business and Technology Word Cloud">
+                    <p>This topic covers news related to the stock market, and technology, with words like “market”, “stock”, “million”, “tech”, “shares”, “data”, etc.</p>
+                </div>
+                <div>
+                    <h3>Social Issues</h3>
+                    <img src="t4.png" alt="Social Issues Word Cloud">
+                    <p>This topic encompasses social issues and public opinion, with words such as “people”, “community”, “rights”, “social”, “change”, etc.</p>
+                </div>
+                <div>
+                    <h3>Crime and Tragedy</h3>
+                    <img src="t5.png" alt="Crime and Tragedy Word Cloud">
+                    <p>This topic includes words related to crime and tragic events, such as “police”, “killed”, “attack”, “murder”, “death”, etc.</p>
+                </div>
+            </div>
 
-            <h3>Politics and Current Events</h3>
-            <img src="t2.png" alt="Politics and Current Events Word Cloud">
-            <p>This topic focuses on political figures and events, with words like “trump”, “obama”, “biden”, “president”, “russia”, “china”, etc.</p>
-
-            <h3>Business and Technology</h3>
-            <img src="t3.png" alt="Business and Technology Word Cloud">
-            <p>This topic covers news related to the stock market, and technology, with words like “market”, “stock”, “million”, “tech”, “shares”, “data”, etc.</p>
-
-            <h3>Social Issues</h3>
-            <img src="t4.png" alt="Social Issues Word Cloud">
-            <p>This topic encompasses social issues and public opinion, with words such as “people”, “community”, “rights”, “social”, “change”, etc.</p>
-
-            <h3>Crime and Tragedy</h3>
-            <img src="t5.png" alt="Crime and Tragedy Word Cloud">
-            <p>This topic includes words related to crime and tragic events, such as “police”, “killed”, “attack”, “murder”, “death”, etc.</p>
-
-            <h2>Sentiment Analysis</h2>
+            <h2 class="sentiments">Sentiment Analysis</h2>
             <img src="allnew 1.png" alt="Sentiment Analysis Plot">
             <p>Using the VADER sentiment analysis tool, headlines were categorized by emotional valence over time. This reveals trends in public sentiment as reflected in news headlines from 2007 to 2022.</p>
 

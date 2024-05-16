@@ -14,29 +14,28 @@
             color: #ddd;
         }
         header {
-            color: #00c6ff;
+            background: linear-gradient(90deg, #00c6ff, #0072ff);
+            color: #fff;
+            padding: 2rem 0;
             text-align: center;
             font-family: 'Playfair Display', serif;
-            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 3rem;
         }
         header p {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             margin-top: 0.5rem;
         }
         .container {
             width: 90%;
             margin: 3rem auto;
-        }
-        .block {
             background-color: #1f1f1f;
             padding: 2rem;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            margin-bottom: 2rem;
         }
         h2, h3 {
             color: #00c6ff;
@@ -89,40 +88,40 @@
         footer {
             text-align: center;
             padding: 1rem 0;
+            background-color: #333;
             color: #fff;
-            margin-top: 2rem;
-            font-size: 0.9rem;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            transform: translateY(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        footer.visible {
+            transform: translateY(0);
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Sandeep Srinivas Pogula</h1>
-        <p>Exploring 15 Years of News Headlines using Topic Modeling and Sentiment Analysis</p>
+        <h1>Exploring 15 Years of News Headlines using Topic Modeling and Sentiment Analysis</h1>
+        <p>Sandeep Srinivas Pogula</p>
     </header>
 
     <div class="container">
-        <section class="block">
+        <section class="content">
             <h2>Introduction</h2>
             <p>This report analyzes a dataset of 4.5 million news headlines published between 2007-2022 from the top 10 news outlets by internet viewership in the United States. The goal is to explore patterns and trends in news headlines over time using unsupervised machine learning techniques like topic modeling and sentiment analysis.</p>
-        </section>
-        
-        <section class="block">
+            
             <h2>Related Research</h2>
             <p>News headlines are one of the important factors which influence people’s opinions; Headlines act as gateways for articles. Analyzing patterns and trends in news headlines can provide valuable insights in understanding news media on internet and their evolution through time.</p>
-        </section>
-        
-        <section class="block">
+            
             <h2>Machine Learning Techniques Used</h2>
             <p>This report performs topic modeling using Latent Dirichlet Allocation (LDA) to extract abstract topics and frequent words from the corpus of 4.5 million headlines. Also, sentiment analysis using the pretrained VADER lexicon is used to categorize headlines by emotional valence to track sentiment over time.</p>
-        </section>
-        
-        <section class="block">
+            
             <h2>Dataset</h2>
             <p>The dataset comprises 4.5 million headlines published between 2007-2022 by the top 10 digital news outlets in the US. No additional demographic or other sensitive attributes are included. The dataset does not include the full text of the articles, which limits the context and depth of the analysis.</p>
-        </section>
 
-        <section class="block">
             <h2>Evaluation and Findings: Topic Modeling (LDA)</h2>
             <div class="topics">
                 <div>
@@ -151,28 +150,33 @@
                     <p>This topic includes words related to crime and tragic events, such as “police”, “killed”, “attack”, “murder”, “death”, etc.</p>
                 </div>
             </div>
-        </section>
 
-        <section class="block sentiments">
-            <h2>Sentiment Analysis</h2>
+            <h2 class="sentiments">Sentiment Analysis</h2>
             <img src="allnew 1.png" alt="Sentiment Analysis Plot" class="centered-img">
             <p>Using the VADER sentiment analysis tool, headlines were categorized by emotional valence over time. This reveals trends in public sentiment as reflected in news headlines from 2007 to 2022.</p>
-        </section>
 
-        <section class="block">
             <h2>Sentiment Analysis by Outlet</h2>
             <img src="allnew 3.png" alt="Sentiment Analysis by Outlet" class="centered-img">
-            <p>This section visualizes the sentiment of headlines from different news outlets. The plot shows how sentiment varies between outlets and over time, offering insight into the editorial tone and bias of each outlet.</p>
-        </section>
-        
-        <section class="block">
+            <p>This section visualizes the sentiment of headlines from different news outlets. The plot shows how sentiment varies between outlets and over time, offering insight into the sensational/emotional tone of each outlet.</p>
+            
             <h2>Conclusion</h2>
             <p>Analyzing patterns in news headlines over the past 15 years using topic modeling and sentiment analysis provides valuable insights into the changing media landscape and public discourse. The findings highlight the evolution of major topics and sentiments, reflecting societal shifts and the influence of significant events.</p>
         </section>
     </div>
 
-    <footer>
+    <footer id="footer">
         <p>&copy; 2024 Sandeep Srinivas Pogula. All rights reserved.</p>
     </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const footer = document.getElementById('footer');
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                footer.classList.add('visible');
+            } else {
+                footer.classList.remove('visible');
+            }
+        });
+    </script>
 </body>
 </html>
